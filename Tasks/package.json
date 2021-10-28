@@ -1,0 +1,18 @@
+{
+    "name": "tasks",
+    "version": "1.0.0",
+    "description": "",
+    "main": "js.js",
+    "scripts": {
+        "build": " postcss css/main.css --use autoprefixer -o css/style.prefix.css"
+    },
+    "author": "Vahid",
+    "license": "ISC",
+    "devDependencies": {
+        "autoprefixer": "^10.3.7",
+        "node-sass": "^6.0.1",
+        "postcss": "^8.3.11",
+        "postcss-cli": "^9.0.1",
+        "sass": "^1.43.4"
+    }
+}

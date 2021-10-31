@@ -1,0 +1,17 @@
+{
+    "name": "calculator",
+    "version": "1.0.0",
+    "description": "",
+    "main": "main.js",
+    "scripts": {
+        "watch:sass": "sass --watch sass/main.scss css/main.css"
+    },
+    "author": "Vahid",
+    "license": "ISC",
+    "devDependencies": {
+        "sass": "^1.43.4"
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-free": "^5.15.4"
+    }
+}

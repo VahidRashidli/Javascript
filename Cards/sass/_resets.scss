@@ -1,0 +1,32 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins" sans-serif;
+    line-height: 1.5;
+    height: 100vh;
+    background: linear-gradient( 45deg, #e37171, #97adaa3b);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: darkred;
+    padding: 5px;
+    &:hover {
+        color: red;
+    }
+}
+
+img {
+    display: block;
+    width: 100%;
+}

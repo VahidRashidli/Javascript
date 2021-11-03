@@ -1,0 +1,52 @@
+header {
+    background: linear-gradient( 45deg, #b99f9f, #ff95952e);
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo {
+            width: 12%;
+            img {
+                border-radius: 50%;
+            }
+        }
+    }
+    li {
+        display: inline-block;
+    }
+    nav {
+        ul {
+            font-size: large;
+            li:not(:last-Child) {
+                margin-right: 20px;
+            }
+        }
+    }
+}
+
+.heart {
+    position: relative;
+    text-align: center;
+    i {
+        font-size: 30px;
+        width: 100%;
+        height: 100%;
+    }
+    .info {
+        position: absolute;
+        top: -2px;
+        right: -5px;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        background-color: yellow;
+        text-align: center;
+        line-height: 1.2;
+    }
+}
+
+@mixin transition {
+    transition: all 0.3s ease-in-out;
+}

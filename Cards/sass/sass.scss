@@ -1,0 +1,138 @@
+@import "_resets.scss";
+@import "_layout.scss";
+.cards {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    row-gap: 30px;
+}
+
+.card {
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    overflow: hidden;
+    height: minmax(500px, 200px);
+    &:hover .card-image-top img {
+        transform: scale(1.2);
+    }
+    .icon {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        font-size: 20px;
+        i {
+            color: #d5d5d5;
+            &:hover {
+                color: red;
+                @include transition;
+            }
+        }
+    }
+}
+
+.card-body {
+    padding: 8px 5px;
+    h2 {
+        text-align: center;
+    }
+    p {
+        margin: 10px 0;
+    }
+}
+
+.card-image-top {
+    overflow: hidden;
+    height: 50%;
+    a {
+        display: block;
+        width: 100%;
+        padding: 0;
+    }
+    img {
+        display: block;
+        width: 100%;
+        @include transition;
+    }
+}
+
+a {
+    @include transition;
+}
+
+.disappear {
+    display: none;
+}
+
+.appear {
+    display: block;
+}
+
+.container-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-height: 140px;
+    max-width: 300px;
+    font-size: 12px;
+    min-width: 154px;
+    margin: 50px 0;
+}
+
+.flex-item .img img {
+    width: 55px;
+}
+
+.display {
+    background-color: white;
+    position: absolute;
+    top: 30px;
+    left: -62px;
+    z-index: 9999999;
+    padding: 0px 10px;
+    overflow-y: auto;
+    max-height: 500px !important;
+}
+
+.disappear {
+    display: none;
+}
+
+.appear {
+    display: block;
+}
+
+@media (max-width:800px) {
+    header li {
+        display: block !important;
+    }
+    .container {
+        flex-direction: column;
+    }
+    .heart {
+        order: 1;
+    }
+    nav {
+        order: 2;
+    }
+    .logo {
+        order: 3;
+    }
+    .cards {
+        margin-top: 10px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:600px) {
+    .cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

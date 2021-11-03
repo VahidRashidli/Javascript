@@ -1,0 +1,222 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins" sans-serif;
+  line-height: 1.5;
+  height: 100vh;
+  background: linear-gradient(45deg, #e37171, #97adaa3b);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: darkred;
+  padding: 5px;
+}
+a:hover {
+  color: red;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+header {
+  background: linear-gradient(45deg, #b99f9f, #ff95952e);
+}
+header .container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .container .logo {
+  width: 12%;
+}
+header .container .logo img {
+  border-radius: 50%;
+}
+header li {
+  display: inline-block;
+}
+header nav ul {
+  font-size: large;
+}
+header nav ul li:not(:last-Child) {
+  margin-right: 20px;
+}
+
+.heart {
+  position: relative;
+  text-align: center;
+}
+.heart i {
+  font-size: 30px;
+  width: 100%;
+  height: 100%;
+}
+.heart .info {
+  position: absolute;
+  top: -2px;
+  right: -5px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: yellow;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.cards {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  row-gap: 30px;
+}
+
+.card {
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  overflow: hidden;
+  height: minmax(500px, 200px);
+}
+.card:hover .card-image-top img {
+  transform: scale(1.2);
+}
+.card .icon {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  font-size: 20px;
+}
+.card .icon i {
+  color: #d5d5d5;
+}
+.card .icon i:hover {
+  color: red;
+  transition: all 0.3s ease-in-out;
+}
+
+.card-body {
+  padding: 8px 5px;
+}
+.card-body h2 {
+  text-align: center;
+}
+.card-body p {
+  margin: 10px 0;
+}
+
+.card-image-top {
+  overflow: hidden;
+  height: 50%;
+}
+.card-image-top a {
+  display: block;
+  width: 100%;
+  padding: 0;
+}
+.card-image-top img {
+  display: block;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+a {
+  transition: all 0.3s ease-in-out;
+}
+
+.disappear {
+  display: none;
+}
+
+.appear {
+  display: block;
+}
+
+.container-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-height: 140px;
+  max-width: 300px;
+  font-size: 12px;
+  min-width: 154px;
+  margin: 50px 0;
+}
+
+.flex-item .img img {
+  width: 55px;
+}
+
+.display {
+  background-color: white;
+  position: absolute;
+  top: 30px;
+  left: -62px;
+  z-index: 9999999;
+  padding: 0px 10px;
+  overflow-y: auto;
+  max-height: 500px !important;
+}
+
+.disappear {
+  display: none;
+}
+
+.appear {
+  display: block;
+}
+
+@media (max-width: 800px) {
+  header li {
+    display: block !important;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .heart {
+    order: 1;
+  }
+
+  nav {
+    order: 2;
+  }
+
+  .logo {
+    order: 3;
+  }
+
+  .cards {
+    margin-top: 10px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
